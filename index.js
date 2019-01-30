@@ -21,21 +21,6 @@ input.addEventListener('keydown', e => {
 //   // is triggering the current event handler.
 //   console.log(this.firstChild.nodeValue.trim() + ' bubbled')
 // }
- 
-for (const aDiv of divs) {
-  aDiv.addEventListener('click', bubble);
-}
-
-divs = document.querySelectorAll('div')
- 
-function capture(e) {
-  console.log(this.firstChild.nodeValue.trim() + ' captured')
-}
- 
-for (const aDiv of divs) {
-  // set the third argument to `true`!
-  aDiv.addEventListener('click', capture, true)
-}
 
 const divs = document.querySelectorAll('div')
  
@@ -52,3 +37,20 @@ for (const aDiv of divs) {
 
 
  
+ 
+for (const aDiv of divs) {
+  aDiv.addEventListener('click', bubble);
+}
+
+divs = document.querySelectorAll('div')
+ 
+function capture(e) {
+  console.log(this.firstChild.nodeValue.trim() + ' captured')
+}
+ 
+for (const aDiv of divs) {
+  // set the third argument to `true`!
+  aDiv.addEventListener('click', capture, true)
+}
+
+
